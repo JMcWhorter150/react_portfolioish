@@ -6,6 +6,9 @@ class Nav extends React.Component{
         this.state = {
             isOpen: false
         }
+
+        // if you need something to run fast do the following
+        // this._toggleMenu = this._toggleMenu.bind(this);
     }
     render() {
         return (
@@ -23,6 +26,7 @@ class Nav extends React.Component{
         )
     }
 
+    // arrow function variable never ever loses the value of 'this' keyword
     _toggleMenu = () => {
         this.setState({
             isOpen: !this.state.isOpen
